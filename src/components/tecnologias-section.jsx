@@ -21,7 +21,7 @@ const TecnologiasSection = () => {
     // Configurar un intervalo para cambiar las tecnologías cada 3 segundos
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % tecnologias.length)
-    }, 3000)
+    }, 1500)
 
     // Limpiar el intervalo cuando el componente se desmonte
     return () => clearInterval(interval)
