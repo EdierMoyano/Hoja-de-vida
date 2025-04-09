@@ -3,7 +3,7 @@ const InteresesGrid = () => {
     { icono: "bi-eye", titulo: "Diseño " },
     { icono: "bi-infinity", titulo: "Inteligencia Artificual" },
     { icono: "bi-infinity", titulo: "Analisis de Datos" },
-    { icono: "bi-bullseye", titulo: "Automatizacion" },
+    { icono: "bi-bullseye", titulo: "Automatizar" },
     
   ]
 
