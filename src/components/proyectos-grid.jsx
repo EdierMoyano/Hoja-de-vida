@@ -1,5 +1,5 @@
 import TeamTalks from '../images/TeamTalks.png'
-import Freefire from '../images/FreeFire.png'
+import Freefire from '../images/Freefire.png'
 
 const ProyectosGrid = () => {
   const proyectos = [
@@ -22,7 +22,7 @@ const ProyectosGrid = () => {
       github: "https://github.com/EdierMoyano/TeamTalks",
       tecnologias: ["HTML", "CSS", "BootStrap", "JavaScript", " PHP", "MySql"],
     }
-   
+  
     
   ]
 
