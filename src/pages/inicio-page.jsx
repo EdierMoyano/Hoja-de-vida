@@ -17,7 +17,7 @@ const InicioPage = () => {
             <h1 className="portada-titulo">Edier Moyano</h1>
             <div className="profesion-container">
               <p className="profesion">
-                Soy <span className="highlight">Desarrollador Web</span>
+                Soy <span className="highlight">Desarrollador Junior Web</span>
               </p>
             </div>
             <div className="portada-descripcion">
