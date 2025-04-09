@@ -86,7 +86,7 @@ const HabilidadesSection = () => {
           <div className="skill-item">
             <div className="skill-info">
               <span className="skill-name">MySql</span>
-              <span className="skill-percentage">%</span>
+              <span className="skill-percentage">100%</span>
             </div>
             <div className="progress">
               <div
