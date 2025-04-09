@@ -10,7 +10,7 @@ const ProyectosGrid = () => {
       imagen: Freefire,
       descripcion:"Este es un proyecto el cual esta basado en el jeugo free fire, en este proyecto nos concentramos en el manejo de la base de datos, en la cual se guardan los datos de los usuarios, sus skins y sus armas.",
             github: "https://github.com/EdierMoyano/Free-Fire-Mysql",
-      tecnologias: ["HTML", "CSS", "JavaScript", "MySql"],
+      tecnologias: ["HTML", "CSS", "JavaScript", "MySql" ,"PhP"],
     },
     { 
       id: 2,
