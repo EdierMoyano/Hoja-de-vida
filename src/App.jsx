@@ -1,6 +1,5 @@
 "use client"
 
-import "bootstrap/dist/css/bootstrap.min.css"
 import "./App.css"
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom"
 import Navbar from "./components/navbar"
@@ -22,13 +21,7 @@ function ScrollToTop() {
 }
 
 function App() {
-  useEffect(() => {
-    // Importar Bootstrap JS dinámicamente
-    const loadBootstrap = async () => {
-      await import("bootstrap/dist/js/bootstrap.bundle.min.js")
-    }
-    loadBootstrap()
-  }, [])
+  
 
   return (
     <Router>
@@ -37,9 +30,9 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<InicioPage />} />
-]          <Route path="/about" element={<AboutPage />} />
+        <Route path="/about" element={<AboutPage />} />
           <Route path="/portfolio" element={<ProyectosPage />} />
-]        </Routes>
+      </Routes>
         <Footer />
       </div>
     </Router>
