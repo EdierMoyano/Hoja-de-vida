@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import profileImg from '../images/perfil.png';
+import profileImg from '../images/Perfil.png';
 
 
 

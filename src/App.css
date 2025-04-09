@@ -51,6 +51,7 @@ section {
   min-height: 100vh; /* Asegura que las secciones ocupen al menos toda la altura de la pantalla */
 }
 
+
 /* Ajuste específico para la sección de portada */
 .portada-section {
   padding-top: 0; /* Quita el padding superior */
@@ -976,4 +977,70 @@ section {
   100% {
     transform: translateX(-100%);
   }
+}
+
+/* Estilos adicionales para el menú móvil */
+@media (max-width: 991.98px) {
+  .navbar-collapse.show {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 0;
+    margin-top: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border: none;
+    outline: none;
+  }
+
+  .navbar-nav {
+    padding-top: 10px;
+  }
+
+  .nav-item {
+    margin-bottom: 10px;
+  }
+
+  .social-nav {
+    display: inline-flex;
+    margin-right: 10px;
+  }
+
+  /* Eliminar cualquier borde o contorno verde */
+  .navbar-collapse.show,
+  .navbar-collapse.show * {
+    border-color: transparent !important;
+    outline-color: transparent !important;
+    box-shadow: none !important;
+  }
+
+  /* Asegurar que no haya espacios entre elementos */
+  .navbar-collapse.show .navbar-nav {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Eliminar bordes verdes */
+  .navbar-collapse.show,
+  .navbar-collapse.show::before,
+  .navbar-collapse.show::after {
+    border: none !important;
+    outline: none !important;
+  }
+}
+
+/* Asegurarse de que no haya bordes verdes en ningún elemento */
+.navbar *,
+.navbar-collapse * {
+  border-color: transparent !important;
+  outline: none !important;
+}
+
+/* Solo permitir bordes verdes en elementos específicos */
+.nav-link.active::after,
+.nav-link:hover::after {
+  border-color: var(--primary-color) !important;
 }

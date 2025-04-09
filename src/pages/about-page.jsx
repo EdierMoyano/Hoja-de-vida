@@ -2,7 +2,7 @@ import EducacionTimeline from "../components/educacion-timeline"
 import HabilidadesSection from "../components/habilidades-section"
 import InteresesGrid from "../components/intereses-grid"
 import TecnologiasSection from "../components/tecnologias-section"
-import profileImg from "../images/perfil.png"
+import profileImg from "../images/Perfil.png"
 
 const AboutPage = () => {
   return (
