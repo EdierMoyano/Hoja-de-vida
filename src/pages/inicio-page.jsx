@@ -14,7 +14,7 @@ const InicioPage = () => {
             </div>
           </div>
           <div className="col-md-7">
-            <h1 className="portada-titulo">Nombre Apellido</h1>
+            <h1 className="portada-titulo">Edier Moyano</h1>
             <div className="profesion-container">
               <p className="profesion">
                 Soy <span className="highlight">Desarrollador Web</span>
