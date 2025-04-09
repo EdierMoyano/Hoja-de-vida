@@ -915,3 +915,65 @@ section {
     font-size: 28px;
   }
 }
+
+
+/* Añade estos estilos a tu archivo App.css existente */
+
+/* Estilos para la sección de tecnologías */
+.tecnologias-wrapper {
+  background-color: #1a1a1a;
+  padding: 50px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.tecnologias-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.tecnologias-slider {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transition: transform 0.5s ease;
+}
+
+.tecnologia-item {
+  text-align: center;
+  padding: 25px;
+  background-color: #222;
+  border-radius: 5px;
+  margin: 0 15px;
+  min-width: 200px;
+  transition: all 0.3s ease;
+}
+
+.tecnologia-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.tecnologia-icon {
+  font-size: 50px;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.tecnologia-item h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Animación para el carrusel */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

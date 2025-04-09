@@ -1,14 +1,41 @@
+"use client"
+
+import { useEffect, useState } from "react"
+
 const TecnologiasSection = () => {
   const tecnologias = [
-    { nombre: "HTML 5", icono: "bi bi-filetype-html", nivel: 85 },
-    { nombre: "CSS", icono: "bi bi-filetype-css", nivel: 80 },
-    { nombre: "Bootstrap", icono: "bi bi-bootstrap", nivel: 75 },
-    { nombre: "JavaScript", icono: "bi bi-filetype-js", nivel: 70 },
-    { nombre: "PHP", icono: "bi bi-filetype-php", nivel: 65 },
-    { nombre: "MySQL", icono: "bi bi-database", nivel: 70 },
-    { nombre: "VS Code", icono: "bi bi-code-square", nivel: 90 },
-    { nombre: "Node.js", icono: "bi bi-nodejs", nivel: 60 },
+    { nombre: "HTML 5", icono: "bi bi-filetype-html" },
+    { nombre: "CSS", icono: "bi bi-filetype-css" },
+    { nombre: "Bootstrap", icono: "bi bi-bootstrap" },
+    { nombre: "JavaScript", icono: "bi bi-filetype-js" },
+    { nombre: "PHP", icono: "bi bi-filetype-php" },
+    { nombre: "MySQL", icono: "bi bi-database" },
+    { nombre: "VS Code", icono: "bi bi-code-square" },
+    { nombre: "Node.js", icono: "bi bi-nodejs" },
   ]
+
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const itemsToShow = 4 // Número de tecnologías visibles a la vez
+
+  useEffect(() => {
+    // Configurar un intervalo para cambiar las tecnologías cada 3 segundos
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % tecnologias.length)
+    }, 3000)
+
+    // Limpiar el intervalo cuando el componente se desmonte
+    return () => clearInterval(interval)
+  }, [tecnologias.length])
+
+  // Función para obtener las tecnologías visibles actualmente
+  const getVisibleTecnologias = () => {
+    const visibleItems = []
+    for (let i = 0; i < itemsToShow; i++) {
+      const index = (currentIndex + i) % tecnologias.length
+      visibleItems.push(tecnologias[index])
+    }
+    return visibleItems
+  }
 
   return (
     <div className="tecnologias-wrapper mt-5">
@@ -17,30 +44,17 @@ const TecnologiasSection = () => {
         <h2 className="section-title">TECNOLOGÍAS</h2>
       </div>
 
-      <div className="row">
-        {tecnologias.map((tech, index) => (
-          <div className="col-md-6 col-lg-3" key={index}>
-            <div className="tech-item">
-              <div className="tech-icon">
+      <div className="tecnologias-carousel">
+        <div className="tecnologias-slider">
+          {getVisibleTecnologias().map((tech, index) => (
+            <div className="tecnologia-item" key={index}>
+              <div className="tecnologia-icon">
                 <i className={tech.icono}></i>
               </div>
               <h3>{tech.nombre}</h3>
-              <div className="skill-info">
-                <span className="skill-percentage">{tech.nivel}%</span>
-              </div>
-              <div className="progress">
-                <div
-                  className="progress-bar"
-                  role="progressbar"
-                  style={{ width: `${tech.nivel}%` }}
-                  aria-valuenow={tech.nivel}
-                  aria-valuemin={0}
-                  aria-valuemax={100}
-                ></div>
-              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   )
