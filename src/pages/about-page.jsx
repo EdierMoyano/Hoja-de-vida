@@ -12,7 +12,7 @@ const AboutPage = () => {
         <div className="section-header text-center">
           <h2 className="section-title">Sobre Mí</h2>
           <p className="section-description">
-            Soy un Desarrollar Junier el cual sigue en su proceso de aprendizaje , me gusta dedeicar mi tiempo libre a
+            Soy un Desarrollar Junior el cual sigue en su proceso de aprendizaje , me gusta dedicar mi tiempo libre a
             mejorar mis habilidades, Conocer nuevas tecnologias y adentrarme en ellas.
           </p>
         </div>
