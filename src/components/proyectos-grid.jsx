@@ -20,6 +20,7 @@ const ProyectosGrid = () => {
       descripcion:
 "Team talks , un portal para el sector educativo , para poder calificar y educar a nustros estudiantes.",
       github: "https://github.com/EdierMoyano/TeamTalks",
+      Website : "teamtalks.com.co", 
       tecnologias: ["HTML", "CSS", "BootStrap", "JavaScript", " PHP", "MySql"],
     }
   
